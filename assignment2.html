@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bus Seat Booking System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f8;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      max-width: 420px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+    }
+    h1 {
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.05rem;
+    }
+    label {
+      font-weight: 600;
+      margin-top: 1rem;
+      display: block;
+      font-size: 0.9rem;
+    }
+    input[type="text"],
+    input[type="password"],
+    select {
+      margin-top: 0.3rem;
+      width: 100%;
+      padding: 0.5rem 0.6rem;
+      border-radius: 4px;
+      border: 1px solid #bbb;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    .gender-options {
+      margin-top: 0.3rem;
+    }
+    .gender-options label {
+      font-weight: normal;
+      margin-right: 1rem;
+      font-size: 0.9rem;
+    }
+    .bus-image-container {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    .bus-image-container img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background: #e0e0e0;
+    }
+    button {
+      margin-top: 2rem;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      padding: 0.65rem 1.2rem;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .welcome-text {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" aria-label="Bus Seat Booking Form">
+    <div class="navbar">
+        <img src="buss.jpg" alt=""> <h1>Bus Seat Book</h1>
+    </div>
+    
+    <div class="welcome-text" aria-live="polite">Welcome to bus booking system</div>
+    <form>
+      <label for="username">User Name</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" autocomplete="username" required />
+
+      <label for="password">User Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required />
+
+      <fieldset class="gender-options" aria-labelledby="gender-label" style="border:none; padding:0; margin:1rem 0 0;">
+        <legend id="gender-label" style="font-weight:600;">User Gender</legend>
+        <label><input type="radio" name="gender" value="male" required /> Male</label>
+        <label><input type="radio" name="gender" value="female" /> Female</label>
+      </fieldset>
+
+      <label for="city-select" style="margin-top:1rem;">User Select City</label>
+      <select id="city-select" name="city" aria-label="Select your city" required>
+        <option value="" disabled selected>Select your city</option>
+        <option value="new delhi">New delhi </option>
+        <option value="agra">agra</option>
+        <option value="delhi">delhi</option>
+        <option value="noida">noida</option>
+        <option value="meerut">Meerut</option>
+      </select>
+
+      <div class="bus-image-container" aria-label="Bus image">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fc8fddef-78f2-411d-ad19-f3085a945a41.png" 
+             alt="Side view of a modern blue and white city bus in motion on an urban street" 
+             onerror="this.style.display='none';" />
+      </div>
+      <button type="submit" aria-label="Book seat button">Seat Book</button>
+    </form>
+  </div>
+</body>
+</html>
