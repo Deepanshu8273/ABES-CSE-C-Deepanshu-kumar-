@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Flipkart Clone Header</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  /* Custom small caret for dropdown */
+  .caret-down {
+    border-top: 5px solid #4B5563; /* gray-700 */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+  /* subtle hover effect on links */
+  .nav-item:hover {
+    color: #1E40AF; /* blue-800 */
+  }
+</style>
+</head>
+<body class="bg-white font-sans">
+  <!-- Top Navbar -->
+  <header class="w-full border-b border-gray-300 sticky top-0 bg-white z-50">
+    <div class="max-w-7xl mx-auto flex items-center p-2 px-4 gap-4 md:gap-8">
+      <!-- Flipkart logo with Explore Plus -->
+      <a href="#" class="flex items-center gap-1 shrink-0">
+        <span class="text-2xl font-extrabold text-blue-700 select-none">Flipkart</span>
+        <span class="text-yellow-500 font-semibold text-sm flex items-center gap-1 select-none">
+          Explore 
+          <span class="text-yellow-400 font-bold">Plus</span>
+          <!-- Simple star icon using SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 stroke-yellow-400 stroke-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2l3 7h7l-5.5 4.5 2 7-6-4-6 4 2-7L2 9h7l3-7z" />
+          </svg>
+        </span>
+      </a>
+
+      <!-- Search Bar -->
+      <form class="flex-grow max-w-xl relative" role="search" aria-label="Search Products, Brands and More">
+        <input 
+          type="search" 
+          placeholder="Search for Products, Brands and More"
+          aria-label="Search for Products, Brands and More"
+          class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+        />
+        <button 
+          type="submit" 
+          aria-label="Search"
+          class="absolute right-1 top-1 bottom-1 px-3 bg-blue-600 text-white rounded-r-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
+        >
+          🔍
+        </button>
+      </form>
+
+      <!-- User Actions (Login, Cart, Become a Seller) -->
+      <nav class="flex items-center gap-6 text-gray-700 text-sm whitespace-nowrap select-none">
+        <button class="flex items-center gap-1 hover:text-blue-700 focus:outline-none" aria-haspopup="false" aria-label="Login">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 1118.88 6.196M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Login
+          <span class="caret-down"></span>
+        </button>
+
+        <button class="flex items-center gap-1 hover:text-blue-700 focus:outline-none" aria-label="View Cart" aria-haspopup="false">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 7M7 13l-1 5h12a2 2 0 100-4H9m-2 5a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          Cart
+        </button>
+
+        
+          
+        </button>
+      </nav>
+    </div>
+
+    <!-- Category menu below header -->
+    <nav class="w-full bg-white border-t border-gray-300 shadow-sm">
+      <div class="max-w-7xl mx-auto flex px-4 space-x-6 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 py-3 select-none">
+        <!-- Each category item -->
+        <a href="#" class="flex flex-col items-center text-xs text-gray-700 hover:text-blue-700 min-w-[72px] shrink-0 cursor-pointer" aria-label="Minutes category">
+          <div class="w-10 h-10 bg-yellow-300 rounded-md flex items-center justify-center font-bold text-purple-800 text-sm relative">
+            <span class="absolute top-0 left-0 bg-blue-600 text-white text-[8px] px-1 rounded-sm -translate-y-1 -translate-x-1 select-none"></span>
+            🛵
+          </div>
+          <span class="mt-1 font-semibold">Minutes</span>
+        </a>
+
+        <a href="#" class="flex flex-col items-center text-xs text-gray-700 hover:text-blue-700 min-w-[72px] shrink-0 cursor-pointer" aria-label="Mobiles & Tablets category">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/52e4a37c-26f9-46cb-9220-4fdd13738ee0.png" alt="Icon showing a smartphone and tablet in blue and pink colors" class="w-10 h-10 object-contain"/>
+          <span class="mt-1 font-semibold whitespace-nowrap">Mobiles & Tablets</span>
+        </a>
+
+        <a href="#" class="flex flex-col items-center text-xs text-gray-700 hover:text-blue-700 min-w-[72px] shrink-0 cursor-pointer" aria-label="Fashion category with dropdown">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9fd43161-9137-42be-a090-63810c3d21c2.png" alt="Icon showing a man and woman representing fashion with casual wear in soft pastel background" class="w-10 h-10 object-contain"/>
+          <span class="mt-1 font-semibold inline-flex items-center gap-1">Fashion <span class="caret-down"></span></span>
+        </a>
+
+        <a href="#" class="flex flex-col items-center text-xs text-gray-700 hover:text-blue-700 min-w-[72px] shrink-0 cursor-pointer" aria-label="Electronics category with dropdown">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/668e4a20-01e7-4f03-b85d-de2d04b5fc0c.png" alt="Icon showing red headphones and a laptop with a blue gradient background" class="w-10 h-10 object-contain"/>
+          <span class="mt-1 font-semibold inline-flex items-center gap-1">Electronics <span class="caret-down"></span></span>
+        </a>
+
+        <a href="#" class="flex flex-col items-center text-xs text-gray-700 hover:text-blue-700 min-w-[72px] shrink-0 cursor-pointer" aria-label="Home & Furniture category with dropdown">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/956b0956-692d-48c6-8758-0c9c036fbe89.png" alt="Icon showing a modern brown chair and side lamp for home and furniture" class="w-10 h-10 object-contain"/>
+          <span class="mt-1 font-semibold inline-flex items-center gap-1">Home & Furniture <span class="caret-down"></span></span>
+        </a>
+
+        <a href="#" class="flex flex-col items-center text-xs text-gray-700 hover:text-blue-700 min-w-[72px] shrink-0 cursor-pointer" aria-label="TVs & Appliances category">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1ff189ef-b2d9-452e-ab32-13ccb93fd4b7.png" alt="Icon showing a flat-screen TV and appliances in cool blue and purple colors" class="w-10 h-10 object-contain"/>
+          <span class="mt-1 font-semibold whitespace-nowrap">TVs & Appliances</span>
+        </a>
+
+        <a href="#" class="flex flex-col items-center text-xs text-gray-700 hover:text-blue-700 min-w-[72px] shrink-0 cursor-pointer" aria-label="Flight Bookings category">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/81f26d75-a7fe-4124-a13b-708158229480.png" alt="Icon showing an airplane in flight with a blue sky background" class="w-10 h-10 object-contain"/>
+          <span class="mt-1 font-semibold whitespace-nowrap">Flight Bookings</span>
+        </a>
+
+        <a href="#" class="flex flex-col items-center text-xs text-gray-700 hover:text-blue-700 min-w-[72px] shrink-0 cursor-pointer" aria-label="Beauty, Food & More category with dropdown">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cbee2a2b-d20a-4a5c-9551-0efa95963a74.png" alt="Icon showing a teddy bear and food items representing beauty and food category" class="w-10 h-10 object-contain"/>
+          <span class="mt-1 font-semibold inline-flex items-center gap-1 whitespace-nowrap">Beauty, Food... <span class="caret-down"></span></span>
+        </a>
+
+        <a href="#" class="flex flex-col items-center text-xs text-gray-700 hover:text-blue-700 min-w-[72px] shrink-0 cursor-pointer" aria-label="Grocery category">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/89d1338b-ff21-4ff1-a35a-e0af441ecd59.png" alt="Icon showing grocery product packages in bright colors representing grocery shopping" class="w-10 h-10 object-contain"/>
+          <span class="mt-1 font-semibold whitespace-nowrap">Grocery</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+</body>
+</html>
+
+</body>
+</html>
