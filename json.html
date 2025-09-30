@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON TASK</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      gap: 90px;
+      margin-top: 80px;
+    }
+    .card {
+      border: 19px solid #f01818;
+      border-radius: 10px;
+      padding: 15px;
+      width: 250px;
+    
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 19px;
+    }
+    .student {
+      margin: 20px 0;
+      padding: 10px;
+
+      border-radius: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="matched">
+    <h2>Matched Branch </h2>
+  </div>
+
+  <div class="card" id="unmatched">
+    <h2>Unmatched Branch</h2>
+  </div>
+
+  <script>
+    let students = [
+      { "student": "krishna", "rollno": 110, "branch": "CSE" },
+      { "student": "dhruve", "rollno": 119, "branch": "IT" },
+      { "student": "ishlok", "rollno": 117, "branch": "CS" },
+      { "student": "Devansh", "rollno": 107, "branch": "IT" },
+      { "student": "Kartikey", "rollno": 114, "branch": "IT" }
+    ];
+
+    var matchedDiv = document.getElementById("matched");
+    var unmatchedDiv = document.getElementById("unmatched");
+
+    for (var i = 0; i < students.length; i++) {
+      var s = students[i];
+      var info = "<div class='student'>" + s.student + " (Roll: " + s.rollno + ", " + s.branch + ")</div>";
+
+      if (s.branch === "IT") {
+        matchedDiv.innerHTML += info;
+      } else {
+        unmatchedDiv.innerHTML += info;
+      }
+    }
+  </script>
+</body>
+</html>
