@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo Classes & Pseudo Elements</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #af4c6f;
+    }
+
+    p::first-letter {
+      color: rgb(0, 255, 208);
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    p::selection {
+      background-color: lightblue;
+      color: black;
+    }
+
+    h2 {
+      color: #666;
+    }
+
+    ul {
+      list-style: square;
+      padding-left: 20px;
+    }
+
+    ul.custom li {
+      list-style-type: circle;
+    }
+
+   
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+    a:hover {
+      color: red;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #ddd;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #aaa;
+      color: white;
+    }
+
+   
+    h2::before, h2::after {
+      content: "👉 ";
+      font-size: 16px;
+    }
+
+    
+    .assignment {
+      background-color: #fff8d6;
+      padding: 15px;
+      border: 1px solid #ddd;
+      margin-top: 20px;
+    }
+
+    .assignment h3::before, .assignment h3::after {
+      content: "📄 ";
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pseudo Classes & Pseudo Elements</h1>
+  <p>This is a paragraph to demonstrate how pseudo-elements work with text. Try selecting this text with your mouse!</p>
+
+  <h2>USEFUL LINKS</h2>
+  <a href="#">Visit Home</a> | <a href="#">Contact Us</a>
+
+  <h2>STUDENT LIST</h2>
+  <ul>
+    <li>khushi</li>
+    <li>Priyanka</li>
+    <li>vikash</li>
+    <li>Sikha</li>
+  </ul>
+
+  <h2>Try The Button</h2>
+  <button id="hoverBtn">Hover Me</button>
+
+  <div class="assignment">
+    <h3>Assignment</h3>
+    <ol>
+      <li>Change the marker style of this list to a different color.</li>
+      <li>Modify the selection color to something other than yellow.</li>
+      <li>Add another list and style its markers differently.</li>
+      <li>Use <code>::before</code> or <code>::after</code> to add icons around links.</li>
+    </ol>
+  </div>
+
+  <script>
+    const btn = document.getElementById("hoverBtn");
+    btn.addEventListener("click", () => {
+      alert("Button Clicked!");
+    });
+  </script>
+
+</body>
+</html>
